@@ -465,7 +465,7 @@ export default function Portfolio() {
                             rel="noopener noreferrer"
                           >
                             <ExternalLink className="w-4 h-4 mr-2" />
-                            Demo
+                            {lang === "ru" ? "Демо" : "Demo"}
                           </a>
                         </Button>
                       )}

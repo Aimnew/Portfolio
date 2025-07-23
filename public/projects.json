@@ -21,74 +21,7 @@
       ]
     },
     "technologies": ["Python", "YOLOv5", "Flask", "OpenCV", "Raspberry Pi"],
-    "github": "https://github.com/your/repo"
-  },
-  {
-    "title": {
-      "ru": "Новостной агрегатор",
-      "en": "News Automation Pipeline"
-    },
-    "description": {
-      "ru": "Автоматический сбор и обработка новостей с NLP-трансформацией",
-      "en": "Automated news collection and processing with NLP transformation"
-    },
-    "features": {
-      "ru": [
-        "Парсинг 10+ источников ежедневно",
-        "LLM-трансформация через openrouter",
-        "Кросс-платформенная публикация"
-      ],
-      "en": [
-        "Daily parsing of 10+ sources",
-        "LLM transformations using openrouter",
-        "Cross-platform publishing"
-      ]
-    },
-    "technologies": ["Python", "LLM", "Telegram API", "BeautifulSoup"],
-    "github": "https://github.com/your/news-aggregator",
-    "demo": "https://your-demo.com"
-  },
-  {
-    "title": {
-      "ru": "Анализ данных Росстата",
-      "en": "Rosstat Data Analysis"
-    },
-    "description": {
-      "ru": "Интерактивная визуализация экономических показателей",
-      "en": "Interactive visualization of economic indicators"
-    },
-    "features": {
-      "ru": ["Сбор и обработка данных", "Дашборд с фильтрами"],
-      "en": ["Data collection and processing", "Dashboard with filters"]
-    },
-    "technologies": ["Python", "Streamlit", "Pandas", "Plotly"],
-    "github": "https://github.com/Aimnew/stream1",
-    "demo": "https://rfpopulate.streamlit.app/"
-  },
-  {
-    "title": {
-      "ru": "Интерактивный анализ рентабельности реконструкции",
-      "en": "Interactive analysis of reconstruction profitability"
-    },
-    "description": {
-      "ru": "Интерактивный анализ рентабельности реконструкции",
-      "en": "Interactive analysis of reconstruction profitability"
-    },
-    "features": {
-      "ru": [
-        "Сбор и обработка данных",
-        "Дашборд с фильтрами",
-        "Построение прогностической модели"
-      ],
-      "en": [
-        "Data collection and processing",
-        "Dashboard with filters",
-        "Building a predictive model"
-      ]
-    },
-    "technologies": ["Python", "Streamlit", "Pandas", "Plotly"],
-    "github": "https://github.com/aimnew/mgsu",
-    "demo": "https://rfipsy.streamlit.app/"
+    "github": "https://github.com/aimnew/404"
   },
   {
     "title": {
@@ -113,6 +46,48 @@
     },
     "technologies": ["Python", "BeautifulSoup", "API", "Openrouter"],
     "github": "https://github.com/aimnew/404",
-    "demo": "t.me/AbsurdAmeriki"
+    "demo": "https://t.me/AbsurdAmeriki"
+  },
+  {
+    "title": {
+      "ru": "Анализ данных Росстата",
+      "en": "Rosstat Data Analysis"
+    },
+    "description": {
+      "ru": "Интерактивная визуализация экономических показателей",
+      "en": "Interactive visualization of economic indicators"
+    },
+    "features": {
+      "ru": ["Сбор и обработка данных", "Дашборд с фильтрами"],
+      "en": ["Data collection and processing", "Dashboard with filters"]
+    },
+    "technologies": ["Python", "Streamlit", "Pandas", "Plotly"],
+    "github": "https://github.com/Aimnew/stream1",
+    "demo": "https://rfpopulate.streamlit.app"
+  },
+  {
+    "title": {
+      "ru": "Интерактивный анализ рентабельности реконструкции",
+      "en": "Interactive analysis of reconstruction profitability"
+    },
+    "description": {
+      "ru": "Интерактивный анализ рентабельности реконструкции",
+      "en": "Interactive analysis of reconstruction profitability"
+    },
+    "features": {
+      "ru": [
+        "Сбор и обработка данных",
+        "Дашборд с фильтрами",
+        "Построение прогностической модели"
+      ],
+      "en": [
+        "Data collection and processing",
+        "Dashboard with filters",
+        "Building a predictive model"
+      ]
+    },
+    "technologies": ["Python", "Streamlit", "Pandas", "Plotly"],
+    "github": "https://github.com/aimnew/mgsu",
+    "demo": "https://rfipsy.streamlit.app"
   }
 ]
