@@ -11,19 +11,17 @@
     "features": {
       "ru": [
         "Потоковая передача видео в реальном времени",
-        "Детекция объектов с точностью 92% mAP",
+        "Детекция объектов и отправка сообщения по триггеру",
         "Интеграция с промышленными системами"
       ],
       "en": [
         "Real-time video streaming",
-        "Object detection with 92% mAP accuracy",
+        "Object detection with trigger",
         "Integration with industrial systems"
       ]
     },
     "technologies": ["Python", "YOLOv5", "Flask", "OpenCV", "Raspberry Pi"],
-    "github": "https://github.com/your/repo",
-    "demo": "https://your-demo.com",
-    "image": "/projects/cv-system.jpg"
+    "github": "https://github.com/your/repo"
   },
   {
     "title": {
@@ -48,6 +46,73 @@
     },
     "technologies": ["Python", "LLM", "Telegram API", "BeautifulSoup"],
     "github": "https://github.com/your/news-aggregator",
-    "image": "/projects/news-aggregator.jpg"
+    "demo": "https://your-demo.com"
+  },
+  {
+    "title": {
+      "ru": "Анализ данных Росстата",
+      "en": "Rosstat Data Analysis"
+    },
+    "description": {
+      "ru": "Интерактивная визуализация экономических показателей",
+      "en": "Interactive visualization of economic indicators"
+    },
+    "features": {
+      "ru": ["Сбор и обработка данных", "Дашборд с фильтрами"],
+      "en": ["Data collection and processing", "Dashboard with filters"]
+    },
+    "technologies": ["Python", "Streamlit", "Pandas", "Plotly"],
+    "github": "https://github.com/Aimnew/stream1",
+    "demo": "https://rfpopulate.streamlit.app/"
+  },
+  {
+    "title": {
+      "ru": "Интерактивный анализ рентабельности реконструкции",
+      "en": "Interactive analysis of reconstruction profitability"
+    },
+    "description": {
+      "ru": "Интерактивный анализ рентабельности реконструкции",
+      "en": "Interactive analysis of reconstruction profitability"
+    },
+    "features": {
+      "ru": [
+        "Сбор и обработка данных",
+        "Дашборд с фильтрами",
+        "Построение прогностической модели"
+      ],
+      "en": [
+        "Data collection and processing",
+        "Dashboard with filters",
+        "Building a predictive model"
+      ]
+    },
+    "technologies": ["Python", "Streamlit", "Pandas", "Plotly"],
+    "github": "https://github.com/aimnew/mgsu",
+    "demo": "https://rfipsy.streamlit.app/"
+  },
+  {
+    "title": {
+      "ru": "Новостной агрегатор",
+      "en": "News Automation Pipeline"
+    },
+    "description": {
+      "ru": "Автоматический сбор и обработка новостей с NLP-трансформацией",
+      "en": "Automated news collection and processing with NLP transformation"
+    },
+    "features": {
+      "ru": [
+        "Парсинг источников по таймингу или вебхуку",
+        "LLM-трансформация через openrouter",
+        "Кросс-платформенная публикация TG → Яндекс.Дзен"
+      ],
+      "en": [
+        "Parsing sources by timing or webhook",
+        "LLM transformation via openrouter",
+        "Cross-platform publishing TG → Yandex Zen"
+      ]
+    },
+    "technologies": ["Python", "BeautifulSoup", "API", "Openrouter"],
+    "github": "https://github.com/aimnew/404",
+    "demo": "t.me/AbsurdAmeriki"
   }
 ]
