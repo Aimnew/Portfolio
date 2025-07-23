@@ -10,7 +10,7 @@ type Theme = "light" | "dark" | "system";
 
 export default function Portfolio() {
   const [lang, setLang] = useState<"ru" | "en">("ru");
-  const [projects, setProjects] = useState([]);
+  const [projects, setProjects] = useState<any[]>([]);
   const [loadError, setLoadError] = useState(false);
   const [theme, setTheme] = useState<Theme>("system");
 
