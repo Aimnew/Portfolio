@@ -77,7 +77,7 @@ export default function Portfolio() {
       try {
         setIsLoading(true);
         setLoadError(false);
-        const response = await fetch("/data/projects.json");
+        const response = await fetch("/projects.json");
         if (!response.ok) throw new Error("Failed to load projects");
         const data = await response.json();
         setProjects(data);
