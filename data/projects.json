@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Система видеодетекции",
+    "description": {
+      "ru": "Объектная детекция в реальном времени с использованием YOLO и Raspberry Pi",
+      "en": "Real-time object detection using YOLO and Raspberry Pi"
+    }
+  },
+  {
+    "title": "Telegram News Bot",
+    "description": {
+      "ru": "Автоматический сбор и анализ новостей с публикацией в Telegram",
+      "en": "Automatic news collection and analysis with Telegram publishing"
+    }
+  },
+  {
+    "title": "KUKA Robot Control",
+    "description": {
+      "ru": "Программирование и автоматизация промышленного робота KUKA",
+      "en": "Programming and automation of KUKA industrial robot"
+    }
+  }
+]
