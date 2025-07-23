@@ -1,23 +1,53 @@
 [
   {
-    "title": "Система видеодетекции",
+    "title": {
+      "ru": "Промышленный мониторинг",
+      "en": "Industrial Monitoring"
+    },
     "description": {
-      "ru": "Объектная детекция в реальном времени с использованием YOLO и Raspberry Pi",
-      "en": "Real-time object detection using YOLO and Raspberry Pi"
-    }
+      "ru": "Система видеодетекции на Raspberry Pi и YOLOv5 с серверной обработкой",
+      "en": "Computer vision system with Raspberry Pi and YOLOv5 for edge-cloud processing"
+    },
+    "features": {
+      "ru": [
+        "Потоковая передача видео в реальном времени",
+        "Детекция объектов с точностью 92% mAP",
+        "Интеграция с промышленными системами"
+      ],
+      "en": [
+        "Real-time video streaming",
+        "Object detection with 92% mAP accuracy",
+        "Integration with industrial systems"
+      ]
+    },
+    "technologies": ["Python", "YOLOv5", "Flask", "OpenCV", "Raspberry Pi"],
+    "github": "https://github.com/your/repo",
+    "demo": "https://your-demo.com",
+    "image": "/projects/cv-system.jpg"
   },
   {
-    "title": "Telegram News Bot",
+    "title": {
+      "ru": "Новостной агрегатор",
+      "en": "News Automation Pipeline"
+    },
     "description": {
-      "ru": "Автоматический сбор и анализ новостей с публикацией в Telegram",
-      "en": "Automatic news collection and analysis with Telegram publishing"
-    }
-  },
-  {
-    "title": "KUKA Robot Control",
-    "description": {
-      "ru": "Программирование и автоматизация промышленного робота KUKA",
-      "en": "Programming and automation of KUKA industrial robot"
-    }
+      "ru": "Автоматический сбор и обработка новостей с NLP-трансформацией",
+      "en": "Automated news collection and processing with NLP transformation"
+    },
+    "features": {
+      "ru": [
+        "Парсинг 10+ источников ежедневно",
+        "LLM-трансформация через openrouter",
+        "Кросс-платформенная публикация"
+      ],
+      "en": [
+        "Daily parsing of 10+ sources",
+        "LLM transformations using openrouter",
+        "Cross-platform publishing"
+      ]
+    },
+    "technologies": ["Python", "LLM", "Telegram API", "BeautifulSoup"],
+    "github": "https://github.com/your/news-aggregator",
+    "image": "/projects/news-aggregator.jpg"
   }
 ]
