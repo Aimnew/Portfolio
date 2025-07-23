@@ -8,7 +8,6 @@ import {
   CardFooter,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import {
   Github,
   Send,
@@ -20,6 +19,7 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { Badge } from "@/components/ui/badge";
 
 type Theme = "light" | "dark" | "system";
 type Language = "ru" | "en";
@@ -46,29 +46,29 @@ export default function Portfolio() {
     const root = window.document.documentElement;
 
     const applyTheme = (t: Theme) => {
+      root.classList.remove("light", "dark");
+
       if (t === "dark") {
         root.classList.add("dark");
       } else if (t === "light") {
-        root.classList.remove("dark");
+        root.classList.add("light");
       } else {
         const isDark = window.matchMedia(
           "(prefers-color-scheme: dark)"
         ).matches;
-        isDark ? root.classList.add("dark") : root.classList.remove("dark");
+        root.classList.add(isDark ? "dark" : "light");
       }
     };
 
     applyTheme(theme);
 
-    if (theme === "system") {
-      const mqListener = (e: MediaQueryListEvent) => {
-        applyTheme("system");
-      };
-      const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-      mediaQuery.addEventListener("change", mqListener);
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    const mqListener = (e: MediaQueryListEvent) => {
+      if (theme === "system") applyTheme("system");
+    };
 
-      return () => mediaQuery.removeEventListener("change", mqListener);
-    }
+    mediaQuery.addEventListener("change", mqListener);
+    return () => mediaQuery.removeEventListener("change", mqListener);
   }, [theme]);
 
   // Load projects
@@ -76,12 +76,13 @@ export default function Portfolio() {
     const fetchProjects = async () => {
       try {
         setIsLoading(true);
+        setLoadError(false);
         const response = await fetch("/data/projects.json");
         if (!response.ok) throw new Error("Failed to load projects");
         const data = await response.json();
         setProjects(data);
       } catch (err) {
-        console.error(err);
+        console.error("Failed to fetch projects:", err);
         setLoadError(true);
       } finally {
         setIsLoading(false);
@@ -153,7 +154,7 @@ export default function Portfolio() {
     system: <Laptop className="w-5 h-5" />,
   };
 
-  // Sample skills data
+  // Skills data
   const skills = [
     "Python",
     "JavaScript",
@@ -279,17 +280,25 @@ export default function Portfolio() {
           transition={{ delay: 1.2 }}
         >
           <Button asChild variant="outline" size="icon">
-            <a href="https://github.com/Aimnew" target="_blank" rel="noopener">
+            <a
+              href="https://github.com/Aimnew"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Github className="w-5 h-5" />
             </a>
           </Button>
           <Button asChild variant="outline" size="icon">
-            <a href="https://t.me/yourusername" target="_blank" rel="noopener">
+            <a
+              href="https://t.me/yourusername"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Send className="w-5 h-5" />
             </a>
           </Button>
           <Button asChild variant="outline" size="icon">
-            <a href="mailto:your@email.com">
+            <a href="mailto:your@email.com" aria-label="Email">
               <Mail className="w-5 h-5" />
             </a>
           </Button>
@@ -362,7 +371,7 @@ export default function Portfolio() {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.3, delay: i * 0.05 }}
             >
-              <Badge variant="outline" className="text-sm font-medium">
+              <Badge variant="secondary" className="text-sm font-medium">
                 {skill}
               </Badge>
             </motion.div>
@@ -416,6 +425,7 @@ export default function Portfolio() {
                           alt={`${project.title[lang]} preview`}
                           fill
                           className="object-cover group-hover:scale-105 transition-transform"
+                          sizes="(max-width: 768px) 100vw, 50vw"
                         />
                       </div>
                     )}
@@ -427,7 +437,7 @@ export default function Portfolio() {
                   </CardContent>
                   <CardFooter className="flex flex-wrap gap-2">
                     {project.technologies?.map((tech, i) => (
-                      <Badge key={i} variant="secondary">
+                      <Badge key={i} variant="outline">
                         {tech}
                       </Badge>
                     ))}
@@ -437,7 +447,7 @@ export default function Portfolio() {
                           <a
                             href={project.github}
                             target="_blank"
-                            rel="noopener"
+                            rel="noopener noreferrer"
                           >
                             <Github className="w-4 h-4 mr-2" />
                             GitHub
@@ -446,7 +456,11 @@ export default function Portfolio() {
                       )}
                       {project.demo && (
                         <Button asChild size="sm">
-                          <a href={project.demo} target="_blank" rel="noopener">
+                          <a
+                            href={project.demo}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
                             <ExternalLink className="w-4 h-4 mr-2" />
                             Demo
                           </a>
@@ -480,7 +494,11 @@ export default function Portfolio() {
             </a>
           </Button>
           <Button asChild>
-            <a href="https://t.me/yourusername" target="_blank" rel="noopener">
+            <a
+              href="https://t.me/yourusername"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Send className="w-5 h-5 mr-2" />
               Telegram
             </a>
