@@ -281,7 +281,7 @@ export default function Portfolio() {
         >
           <Button asChild variant="outline" size="icon">
             <a
-              href="https://github.com/Aimnew"
+              href={`https://github.com/${process.env.NEXT_PUBLIC_GITHUB_USERNAME}`}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -290,7 +290,7 @@ export default function Portfolio() {
           </Button>
           <Button asChild variant="outline" size="icon">
             <a
-              href="https://t.me/yourusername"
+              href={`https://t.me/${process.env.NEXT_PUBLIC_TELEGRAM_USERNAME}`}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -298,7 +298,10 @@ export default function Portfolio() {
             </a>
           </Button>
           <Button asChild variant="outline" size="icon">
-            <a href="mailto:your@email.com" aria-label="Email">
+            <a
+              href={`mailto:${process.env.NEXT_PUBLIC_CONTACT_EMAIL}`}
+              aria-label="Email"
+            >
               <Mail className="w-5 h-5" />
             </a>
           </Button>
